@@ -5,3 +5,7 @@ def test_greet_basic():
 
 def test_greet_world():
     assert greet("World") == "Hello, World!"
+
+
+def test_greet_uppercase():
+    assert greet("Alice", uppercase=True) == "HELLO, ALICE!"
