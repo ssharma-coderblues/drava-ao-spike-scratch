@@ -8,3 +8,7 @@ def test_sanitize_no_change():
 
 def test_sanitize_inner_spaces():
     assert sanitize("  hello world  ") == "hello world"
+
+
+def test_sanitize_uppercase():
+    assert sanitize("  hello world  ", uppercase=True) == "HELLO WORLD"
