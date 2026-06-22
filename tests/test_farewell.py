@@ -11,3 +11,7 @@ def test_bid_farewell_world():
 
 def test_bid_farewell_uppercase():
     assert bid_farewell("Alice", uppercase=True) == "GOODBYE, ALICE!"
+
+
+def test_bid_farewell_sanitizes_name():
+    assert bid_farewell("  Alice  ") == "Goodbye, Alice!"
